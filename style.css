@@ -1,0 +1,639 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Arial', sans-serif;
+}
+
+/* BODY / BACKGROUND */
+.accueil{
+background-image:url("images/foot\ \(2\).jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+height:100vh;
+position:relative;
+}
+/* FILTRE SOMBRE */
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+z-index:1;
+}
+
+/* HEADER & NAV */
+header{
+position:fixed;
+top:0;
+width:100%;
+z-index:10;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:black;
+
+}
+.videos-title {
+    margin-top: 100px; /* ajuste cette valeur selon le besoin */
+    text-align: center; /* si tu veux centrer le titre */
+    color: #00ff88; /* couleur lumineuse assortie au menu */
+    text-shadow:
+        0 0 5px #00ff88,
+        0 0 10px #00ff88,
+        0 0 20px #00ff88;
+}
+.navbar .logo{
+color:white;
+font-size:24px;
+font-weight:bold;
+text-shadow:0 0 10px lime;
+}
+
+.navbar .nav-links{
+list-style:none;
+display:flex;
+gap:25px;
+}
+
+.navbar .nav-links li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+padding:8px 15px;
+border-radius:8px;
+transition:0.3s;
+text-shadow:0 0 5px lime;
+}
+
+.navbar .nav-links li a:hover{
+background:lime;
+color:black;
+box-shadow:0 0 15px lime;
+transform:scale(1.1);
+}
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  padding:10px 15px;
+  transition:0.3s;
+  position:relative;
+}
+
+.nav-links a:hover{
+  color:cyan;
+}
+
+/* LIEN ACTIF */
+.nav-links a.active{
+  color:yellow; /* texte différent */
+  font-weight:bold;
+}
+
+/* Ligne ou trait sous le lien actif */
+.nav-links a.active::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:3px;
+  background:yellow;
+  border-radius:2px;
+}
+
+/* CONTENU PRINCIPAL */
+.hero{
+position:relative;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+z-index:2;
+padding:20px;
+}
+
+/* TITRE */
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+text-shadow:0 0 20px lime, 0 0 30px yellow;
+border-bottom:3px solid lime;
+padding-bottom:10px;
+animation: glow 2s infinite alternate;
+}
+
+/* TEXTE */
+.hero p{
+max-width:700px;
+font-size:20px;
+line-height:1.6;
+margin-bottom:40px;
+text-shadow:0 0 5px lime;
+}
+
+/* BOUTONS */
+.buttons a{
+text-decoration:none;
+color:white;
+border:2px solid lime;
+padding:12px 30px;
+margin:10px;
+border-radius:30px;
+font-size:18px;
+transition:0.3s;
+text-shadow:0 0 5px lime;
+}
+
+.buttons a:hover{
+background:lime;
+color:black;
+box-shadow:0 0 20px lime;
+transform:scale(1.1);
+}
+
+/* ANIMATION LUMINEUSE TITRE */
+@keyframes glow{
+from{
+text-shadow:0 0 10px lime, 0 0 20px yellow;
+}
+to{
+text-shadow:0 0 20px lime, 0 0 40px yellow;
+}
+}
+.sport-page{
+background-color:black;
+color:white;
+padding-top:80px; /* espace pour header */
+font-family:'Arial', sans-serif;
+}
+
+/* TITRE PAGE */
+.page-title{
+text-align:center;
+font-size:60px;
+margin-bottom:50px;
+text-shadow:0 0 20px cyan;
+}
+
+/* SECTIONS */
+.sport-section{
+margin:50px auto;
+max-width:1200px;
+padding:0 20px;
+}
+
+.sport-section h2{
+font-size:36px;
+margin-bottom:25px;
+border-bottom:2px solid cyan;
+padding-bottom:10px;
+text-shadow:0 0 10px cyan;
+}
+
+/* CARTES */
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+border:2px solid cyan;
+border-radius:20px;
+width:300px;
+padding:20px;
+text-align:center;
+transition:0.3s;
+box-shadow:0 0 10px cyan;
+}
+
+.card img{
+width:100%;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+font-size:22px;
+color:cyan;
+}
+
+.card p{
+font-size:16px;
+line-height:1.5;
+color:white;
+}
+
+/* EFFET HOVER */
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 30px cyan;
+border-color:yellow;
+}
+.celeb-page{
+background-color:black;
+color:white;
+padding-top:80px; /* espace pour header */
+font-family:'Arial', sans-serif;
+}
+
+/* TITRE PAGE */
+.page-title{
+text-align:center;
+font-size:60px;
+margin-bottom:50px;
+text-shadow:0 0 20px cyan;
+animation: glow 2s infinite alternate;
+}
+
+/* GRILLE DE CARTES */
+.cards-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+max-width:1200px;
+margin:0 auto;
+padding:0 20px;
+}
+
+/* CARTES */
+.card{
+background:rgba(255,255,255,0.05);
+border:2px solid cyan;
+border-radius:20px;
+padding:20px;
+text-align:center;
+transition:0.3s;
+box-shadow:0 0 10px cyan;
+opacity:0;
+transform: translateY(50px);
+animation: fadeInUp 0.8s forwards;
+}
+
+.card:nth-child(1){animation-delay:0.1s;}
+.card:nth-child(2){animation-delay:0.2s;}
+.card:nth-child(3){animation-delay:0.3s;}
+.card:nth-child(4){animation-delay:0.4s;}
+.card:nth-child(5){animation-delay:0.5s;}
+.card:nth-child(6){animation-delay:0.6s;}
+.card:nth-child(7){animation-delay:0.7s;}
+.card:nth-child(8){animation-delay:0.8s;}
+.card:nth-child(9){animation-delay:0.9s;}
+
+.card img{
+width:100%;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+font-size:22px;
+color:cyan;
+}
+
+.card p{
+font-size:16px;
+line-height:1.5;
+color:white;
+}
+
+/* EFFET HOVER */
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 30px cyan;
+border-color:yellow;
+}
+
+/* ANIMATION LUMINEUSE TITRE */
+@keyframes glow{
+from{text-shadow:0 0 10px cyan, 0 0 20px yellow;}
+to{text-shadow:0 0 20px cyan, 0 0 40px yellow;}
+}
+
+/* ANIMATION APPARITION CARTES */
+@keyframes fadeInUp{
+to{
+opacity:1;
+transform: translateY(0);
+}
+}
+.competition-page{
+  background-color:black;
+  color:white;
+  padding-top:80px;
+  font-family:'Arial', sans-serif;
+  min-height:100vh;
+}
+
+/* TITRE */
+.page-title{
+  text-align:center;
+  font-size:60px;
+  margin-bottom:50px;
+  text-shadow:0 0 20px cyan;
+  animation: glow 2s infinite alternate;
+}
+
+/* GRILLE 3x2 */
+.comp-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:40px;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+/* FLIP CARD */
+.flip-card{
+  background-color: transparent;
+  width:350px;
+  height:300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
+
+/* FACE AVANT */
+.flip-card-front, .flip-card-back{
+  position:absolute;
+  width:100%;
+  height:100%;
+  backface-visibility:hidden;
+  border-radius:20px;
+  border:2px solid cyan;
+  box-shadow:0 0 10px cyan;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+/* FRONT */
+.flip-card-front{
+  background:rgba(255,255,255,0.05);
+}
+
+/* BACK */
+.flip-card-back{
+  background:rgba(0,0,0,0.9);
+  transform:rotateY(180deg);
+}
+
+.flip-card-back img{
+  width:70%;
+  border-radius:15px;
+}
+
+/* TITRE DES CARTES */
+.flip-card-front h3, .flip-card-back h3{
+  color:cyan;
+  margin-bottom:10px;
+}
+
+/* TEXTE */
+.flip-card-front p{
+  color:white;
+  font-size:16px;
+  line-height:1.5;
+}
+
+/* HOVER EFFECT */
+.flip-card:hover{
+  box-shadow:0 0 30px cyan;
+  border-color:yellow;
+}
+
+/* ANIMATION TITRE PAGE */
+@keyframes glow{
+  from{text-shadow:0 0 10px cyan, 0 0 20px yellow;}
+  to{text-shadow:0 0 20px cyan, 0 0 40px yellow;}
+}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .flip-card{width:45%; margin-bottom:30px;}
+}
+@media(max-width:700px){
+  .flip-card{width:100%;}
+}
+.video-page{
+background-color:#111;
+color:white;
+padding-top:80px;
+font-family:'Arial', sans-serif;
+}
+
+/* TITRE */
+.page-title{
+text-align:center;
+font-size:60px;
+margin-bottom:50px;
+text-shadow:0 0 20px cyan;
+animation: glow 2s infinite alternate;
+}
+
+/* GRILLE VIDEO */
+.video-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:40px;
+max-width:1200px;
+margin:0 auto;
+padding:0 20px;
+}
+
+/* VIDEO CARD */
+.video-card{
+position:relative;
+background:rgba(255,255,255,0.05);
+border:2px solid cyan;
+border-radius:20px;
+overflow:hidden;
+cursor:pointer;
+text-align:center;
+transition:0.3s;
+box-shadow:0 0 10px cyan;
+height: 350px;
+}
+
+.video-card video{
+width:100%;
+border-radius:20px 20px 0 0;
+display:block;
+}
+
+.video-card h3{
+padding:10px 0;
+font-size:22px;
+color:cyan;
+text-shadow:0 0 5px cyan;
+}
+
+/* OVERLAY */
+.video-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+font-size:20px;
+font-weight:bold;
+background:rgba(0,0,0,0.4);
+opacity:1;
+transition:0.3s;
+}
+
+.video-card:hover .video-overlay{
+opacity:0;
+}
+
+/* HOVER EFFECT */
+.video-card:hover{
+transform:scale(1.05);
+box-shadow:0 0 30px cyan;
+border-color:yellow;
+}
+
+/* ANIMATION TITRE */
+@keyframes glow{
+from{text-shadow:0 0 10px cyan, 0 0 20px yellow;}
+to{text-shadow:0 0 20px cyan, 0 0 40px yellow;}
+}
+.active{
+    color: green;
+}
+.videos h2{
+text-align:center;
+font-size:50px;
+margin-top:30px;
+color:#8cff8c;
+text-shadow:0 0 20px #00ff88;
+}
+
+/* GRILLE DES VIDEOS */
+.video-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+margin-top:50px;
+}
+
+/* CARTE VIDEO */
+.video-card{
+position:relative;
+width:420px;
+height:300px;
+border-radius:20px;
+overflow:hidden;
+border:2px solid #00ffe5;
+box-shadow:0 0 20px #00ffe5;
+cursor:pointer;
+transition:0.4s;
+}
+
+/* VIDEO DERRIERE */
+.video-card video{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0;
+transform:scale(1);
+transition:0.5s;
+}
+
+/* TEXTE DEVANT */
+.video-title{
+position:absolute;
+width:100%;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+font-size:20px;
+z-index:2;
+text-align:center;
+}
+
+/* TITRE VIDEO */
+.video-title h3{
+color:#00ffe5;
+margin-top:10px;
+font-size:24px;
+}
+
+/* EFFET SURVOL */
+.video-card:hover video{
+opacity:1;
+transform:scale(1.1);
+}
+
+/* CARTE QUI S'ILLUMINE */
+.video-card:hover{
+box-shadow:
+0 0 20px #00ffe5,
+0 0 40px #00ffe5,
+0 0 60px #00ffe5;
+transform:scale(1.05);
+}
+
+/* TEXTE QUI DISPARAIT */
+.video-card:hover .video-title{
+opacity:0;
+transition:0.4s;
+}
+.texte-histoire{
+max-width:900px;
+margin:20px auto 40px auto;
+font-size:18px;
+line-height:1.8;
+text-align:center;
+color:#e6e6e6;
+padding:20px;
+border-left:4px solid #00ffe5;
+border-right:4px solid #00ffe5;
+border-radius:10px;
+box-shadow:0 0 15px #00ffe5;
+background:rgba(0,0,0,0.3);
+}
+.para{
+    color: #00ffe5;
+    text-align: center;
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
